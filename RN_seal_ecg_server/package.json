@@ -1,0 +1,9 @@
+{
+  "name": "rn_seal_ecg",
+  "version": "0.0.1",
+  "entry point": "Server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-seal": "^4.5.4"
+  }
+}
