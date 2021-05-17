@@ -36,6 +36,8 @@
     }
 
     const string_encParms = encParms.save();
+
+    const evaluator = seal.Evaluator(context)
     
     // app.use(express.json()) // for parsing application/json
     app.use(express.json({limit:'200mb'}));
@@ -51,6 +53,7 @@
       res.json({encParms: string_encParms})
     })
 
+    //API che effettua la somma cifrata delle activities e la restituisce al client
     app.post('/getActivitiesSum', (req, res) => {
       // console.log(req.body)
 
@@ -64,15 +67,10 @@
       Galois_key.load(context, Galois_key_compressed)
       console.log("ho caricato la chiave di Galois")
 
-      let Public_key_compressed = req.body['PK'];
-      let Public_key = seal.PublicKey()
-      Public_key.load(context, Public_key_compressed)
-      console.log("ho caricato la chiave pubblica")
-
       let Chipertext_activities_sum = seal.CipherText()
 
-      const evaluator = seal.Evaluator(context)
-      console.log("ho creato il valutatore")
+      // const evaluator = seal.Evaluator(context)
+      // console.log("ho creato il valutatore")
 
       // somma tutti gli elementi dell'array in maniera cifrata
       evaluator.sumElements(Chipertext_activities,Galois_key,seal.SchemeType.ckks,Chipertext_activities_sum) 
@@ -84,6 +82,60 @@
       console.log("ho compresso i valori sommati")
       
       res.json({Chipertext_sum: Chipertext_activities_sum_compressed})
+    })
+
+
+    // API che calcola la media degli heart beats e la restituisce al client
+    app.post('/getHeartBeatsAverage', (req, res) => {
+     
+      let Chipertext_heart_beats_compressed = req.body['Chipertext'];
+      let Chipertext_heart_beats = seal.CipherText();
+      Chipertext_heart_beats.load(context,Chipertext_heart_beats_compressed)
+      console.log("ho caricato Chipertext_heart_beats")
+
+      let Galois_key_compressed = req.body['Galois'];
+      let Galois_key = seal.GaloisKeys()
+      Galois_key.load(context, Galois_key_compressed)
+      console.log("ho caricato la chiave di Galois")
+
+      let Relin_key_compressed = req.body['Relin'];
+      let Relin_key = seal.RelinKeys()
+      Relin_key.load(context, Relin_key_compressed)
+      console.log("ho caricato la chiave di riallineamento")
+
+      let Plaintext_coef_compressed = req.body['Plaintext_coef']
+      let Plaintext_coef = seal.PlainText();
+      Plaintext_coef.load(context, Plaintext_coef_compressed)
+      console.log("ho caricato Plaintext_coef")
+
+
+      // somma tutti gli elementi dell'array in maniera cifrata
+      let Chipertext_heart_beats_sum = seal.CipherText()
+      evaluator.sumElements(Chipertext_heart_beats,Galois_key,seal.SchemeType.ckks,Chipertext_heart_beats_sum) 
+      console.log("ho sommato i valori cifrati")   
+      
+      //Chipertext che contiene la media
+      let Chipertext_heart_beats_average = seal.CipherText()
+
+      evaluator.multiplyPlain(
+        Chipertext_heart_beats_sum,
+        Plaintext_coef,
+        Chipertext_heart_beats_average
+      )
+      
+      let Chipertext_heart_beats_average_relin = seal.CipherText()
+
+      evaluator.relinearize(
+        Chipertext_heart_beats_average,
+        Relin_key,
+        Chipertext_heart_beats_average_relin
+      )
+
+      let Chipertext_heart_beats_average_relin_compressed = seal.CipherText();
+      Chipertext_heart_beats_average_relin_compressed = Chipertext_heart_beats_average_relin.save();
+      console.log("ho compresso la media")
+      
+      res.json({Chipertext_HB_average: Chipertext_heart_beats_average_relin_compressed})
     })
     
 

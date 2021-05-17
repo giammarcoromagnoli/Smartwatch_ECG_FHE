@@ -1,0 +1,458 @@
+[
+ {
+   "Row": 1,
+   "Age": 20,
+   "Heart_beat": 78.53130238,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 2,
+   "Age": 20,
+   "Heart_beat": 78.45339028,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 3,
+   "Age": 20,
+   "Heart_beat": 78.54082508,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 4,
+   "Age": 20,
+   "Heart_beat": 78.62825988,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 5,
+   "Age": 20,
+   "Heart_beat": 78.71569468,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 6,
+   "Age": 20,
+   "Heart_beat": 78.80312949,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 7,
+   "Age": 20,
+   "Heart_beat": 78.89056429,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 8,
+   "Age": 20,
+   "Heart_beat": 78.97799909,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 9,
+   "Age": 20,
+   "Heart_beat": 79.06543389,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 10,
+   "Age": 20,
+   "Heart_beat": 79.1528687,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 11,
+   "Age": 20,
+   "Heart_beat": 79.2403035,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 12,
+   "Age": 20,
+   "Heart_beat": 79.3277383,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 13,
+   "Age": 20,
+   "Heart_beat": 79.4151731,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 14,
+   "Age": 20,
+   "Heart_beat": 79.50260791,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 15,
+   "Age": 20,
+   "Heart_beat": 79.59004271,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 16,
+   "Age": 20,
+   "Heart_beat": 79.67747751,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 17,
+   "Age": 20,
+   "Heart_beat": 79.76491231,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 18,
+   "Age": 20,
+   "Heart_beat": 79.85234712,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 19,
+   "Age": 20,
+   "Heart_beat": 79.93978192,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 20,
+   "Age": 20,
+   "Heart_beat": 80.02721672,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 21,
+   "Age": 20,
+   "Heart_beat": 80.11465152,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 22,
+   "Age": 20,
+   "Heart_beat": 80.20208632,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 23,
+   "Age": 20,
+   "Heart_beat": 80.28952113,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 24,
+   "Age": 20,
+   "Heart_beat": 80.37695593,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 25,
+   "Age": 20,
+   "Heart_beat": 80.46439073,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 26,
+   "Age": 20,
+   "Heart_beat": 80.55182553,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 27,
+   "Age": 20,
+   "Heart_beat": 80.63926034,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 28,
+   "Age": 20,
+   "Heart_beat": 80.72669514,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 29,
+   "Age": 20,
+   "Heart_beat": 80.81412994,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 30,
+   "Age": 20,
+   "Heart_beat": 80.90156474,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 31,
+   "Age": 20,
+   "Heart_beat": 80.98899955,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 32,
+   "Age": 20,
+   "Heart_beat": 81.07643435,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 33,
+   "Age": 20,
+   "Heart_beat": 81.16386915,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 34,
+   "Age": 20,
+   "Heart_beat": 81.25130395,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 35,
+   "Age": 20,
+   "Heart_beat": 81.33873876,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 36,
+   "Age": 20,
+   "Heart_beat": 81.42617356,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 37,
+   "Age": 20,
+   "Heart_beat": 81.51360836,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 38,
+   "Age": 20,
+   "Heart_beat": 81.60104316,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 39,
+   "Age": 20,
+   "Heart_beat": 81.68847796,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 40,
+   "Age": 20,
+   "Heart_beat": 81.77591277,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 41,
+   "Age": 20,
+   "Heart_beat": 81.86334757,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 42,
+   "Age": 20,
+   "Heart_beat": 81.95078237,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 43,
+   "Age": 20,
+   "Heart_beat": 82.03821717,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 44,
+   "Age": 20,
+   "Heart_beat": 82.12565198,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 45,
+   "Age": 20,
+   "Heart_beat": 82.21308678,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 46,
+   "Age": 20,
+   "Heart_beat": 82.30052158,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 47,
+   "Age": 20,
+   "Heart_beat": 82.38795638,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 48,
+   "Age": 20,
+   "Heart_beat": 82.47539119,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 49,
+   "Age": 20,
+   "Heart_beat": 82.56282599,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 50,
+   "Age": 20,
+   "Heart_beat": 82.65026079,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 51,
+   "Age": 20,
+   "Heart_beat": 82.73769559,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 52,
+   "Age": 20,
+   "Heart_beat": 82.8251304,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 53,
+   "Age": 20,
+   "Heart_beat": 82.9125652,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 54,
+   "Age": 20,
+   "Heart_beat": 83,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 55,
+   "Age": 20,
+   "Heart_beat": 75,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 56,
+   "Age": 20,
+   "Heart_beat": 67,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 57,
+   "Age": 20,
+   "Heart_beat": 59,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 58,
+   "Age": 20,
+   "Heart_beat": 51,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 59,
+   "Age": 20,
+   "Heart_beat": 71.1126,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 60,
+   "Age": 20,
+   "Heart_beat": 66.74173333,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 61,
+   "Age": 20,
+   "Heart_beat": 62.37086667,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 62,
+   "Age": 20,
+   "Heart_beat": 58,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 63,
+   "Age": 20,
+   "Heart_beat": 58.75,
+   "Activity_trimmed": 1
+ },
+ {
+   "Row": 64,
+   "Age": 20,
+   "Heart_beat": 59.5,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 65,
+   "Age": 20,
+   "Heart_beat": 60.25,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 66,
+   "Age": 20,
+   "Heart_beat": 61,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 67,
+   "Age": 20,
+   "Heart_beat": 64,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 68,
+   "Age": 20,
+   "Heart_beat": 67,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 69,
+   "Age": 20,
+   "Heart_beat": 70,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 70,
+   "Age": 20,
+   "Heart_beat": 73,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 71,
+   "Age": 20,
+   "Heart_beat": 76,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 72,
+   "Age": 20,
+   "Heart_beat": 80,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 73,
+   "Age": 20,
+   "Heart_beat": 84,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 74,
+   "Age": 20,
+   "Heart_beat": 88,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 75,
+   "Age": 20,
+   "Heart_beat": 84.84376746,
+   "Activity_trimmed": 0
+ },
+ {
+   "Row": 76,
+   "Age": 20,
+   "Heart_beat": 81.68753492,
+   "Activity_trimmed": 0
+ }
+]
