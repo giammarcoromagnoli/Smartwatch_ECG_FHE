@@ -92,7 +92,12 @@ const decryptHeartBeatsAverage = async (context, seal, Secret_key,Public_key, Re
     const media_in_chiaro_arrotondata = Math.round(media_in_chiaro[0]);
     console.log('Media decodificata', media_in_chiaro[0])
     console.log('Media decodificata con arrotondamento', media_in_chiaro_arrotondata)
+    
+    // Calcolo l'errore assoluto
+    const errore_assoluto_heart_beats = media_in_chiaro[0] - media_in_chiaro_arrotondata;
+    console.log("Errore assoulto heart beats: ", errore_assoluto_heart_beats)
     console.log(" ")
+
 
     // Controllo se la media è > o < di due soglie
     if(media_in_chiaro_arrotondata > 80){
@@ -100,6 +105,10 @@ const decryptHeartBeatsAverage = async (context, seal, Secret_key,Public_key, Re
     }else{
       console.log("La media dei battiti è nella norma")
     }
+
+    // Deallocazione risorse
+    Chipertext_HB_average.delete()
+    Plaintext_HB_average.delete()
 
     console.log(" ")
     console.log(">>> FINE STEP 8")
@@ -161,6 +170,12 @@ const checkHeartBeats = async(context, seal, Secret_key,Public_key, Relin_key_co
     })
     .then(response => response.json())
     .then(encryptedHeartBeatsAverage => {
+
+      // Deallocazione risorse
+      Plaintext_coef.delete();
+      Plaintext_heart_beats.delete();
+      Chipertext_heart_beats.delete();
+
       console.log(">>> FINE STEP 7");
       console.timeEnd("STEP 7");
       console.log(" ");
@@ -212,6 +227,14 @@ const decryptSumActivities = async (context, seal, Secret_key,Public_key, Relin_
     console.log("Somma activities: ", somma_in_chiaro[0])
     console.log("Somma activities con arrotondamento: ", somma_in_chiaro_arrotondata)
     
+    // Calcolo l'errore assoluto
+    const errore_assoluto_activities = somma_in_chiaro[0] - somma_in_chiaro_arrotondata;
+    console.log("Errore assoulto activities: ", errore_assoluto_activities);
+
+    // Deallocazione risorse
+    Chipertext_activities_sum.delete()
+    Plaintext_activities_sum.delete()
+
     console.log(">>> FINE STEP 6")
     console.timeEnd("STEP 6");
     console.log(" ")
@@ -281,6 +304,10 @@ const sendActivitiesToServer = async (context, seal, Secret_key,Public_key, Reli
       console.log(">>> FINE STEP 5")
       console.timeEnd("STEP 5");
       console.log(" ")
+
+      // Deallocazione risorse
+      Plaintext_activities.delete();
+      Chipertext_activities.delete()
       // Passa a STEP 6
       decryptSumActivities(context, seal, Secret_key,Public_key, Relin_key_compressed, Galois_key_compressed, ckksEncoder, encryptor, decryptor,scale, sumEncrypted["Chipertext_sum"])
     })
@@ -339,6 +366,15 @@ const createEncDec = async (context, seal, Secret_key,Public_key, Relin_key_comp
       await sendActivitiesToServer(context, seal, Secret_key,Public_key, Relin_key_compressed, Galois_key_compressed, ckksEncoder, encryptor, decryptor, scale);
       current_minute++;
     }
+
+    // Deallocazione risorse
+    Secret_key.delete();
+    Public_key.delete();
+    ckksEncoder.delete();
+    encryptor.delete();
+    decryptor.delete();
+    context.delete();
+
     console.timeEnd("Tempo di esecuzione totale")
     }catch(err){
     console.log(err)
@@ -386,6 +422,11 @@ const generateKeys = async (context, seal) =>{
     console.timeEnd("STEP 3");
     console.log(" ")
 
+    // Deallocazione risorse
+    Galois_key.delete();
+    Relin_key.delete();
+    keyGenerator.delete();
+
     // Passa a STEP 4
     createEncDec(context, seal, Secret_key, Public_key, Relin_key_compressed, Galois_key_compressed)
 
@@ -409,14 +450,14 @@ const createContext = async (encParms) =>{
     
     // Load parametri di encryption compressi  (String --> EncryptionParameters)
     console.time("Load Encryption Parameters")
-    let loaded_encParms = seal.EncryptionParameters();
-    loaded_encParms.load(encParms);
+    let EncryptionParms = seal.EncryptionParameters();
+    EncryptionParms.load(encParms);
     console.timeEnd("Load Encryption Parameters")
     
     // Crea il contesto per SEAL
     console.time("Creazione del contesto");
     const securityLevel = seal.SecurityLevel.tc128  // Livello di sicurezza a 128 bit (minimo dello standard)
-    const context = seal.Context(loaded_encParms,true,securityLevel)
+    const context = seal.Context(EncryptionParms,true,securityLevel)
     console.timeEnd("Creazione del contesto");
 
     // Controlla se il contesto è stato creato correttamente
@@ -427,6 +468,9 @@ const createContext = async (encParms) =>{
     console.log(">>> FINE STEP 2")
     console.timeEnd("STEP 2");
     console.log(" ")
+
+    // Deallocazione risorse
+    EncryptionParms.delete();
 
     // Passa a STEP 3
     generateKeys(context, seal);
@@ -478,6 +522,7 @@ const getEcryptionParms = async () => {
 const Button_start = (props) => {
   const [attivo, setAttivo] = useState(false);
   const [context, setContext] = useState(2);
+  
 
   return(
     <View>

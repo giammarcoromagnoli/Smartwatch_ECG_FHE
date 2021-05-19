@@ -130,9 +130,10 @@
         Relin_key,
         Chipertext_heart_beats_average_relin
       )
+      const Chiper_rescaled = evaluator.rescaleToNext(Chipertext_heart_beats_average_relin)
 
       let Chipertext_heart_beats_average_relin_compressed = seal.CipherText();
-      Chipertext_heart_beats_average_relin_compressed = Chipertext_heart_beats_average_relin.save();
+      Chipertext_heart_beats_average_relin_compressed = Chiper_rescaled.save();
       console.log("ho compresso la media")
       
       res.json({Chipertext_HB_average: Chipertext_heart_beats_average_relin_compressed})
